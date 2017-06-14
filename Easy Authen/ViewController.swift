@@ -90,6 +90,14 @@ class ViewController: UIViewController {
         //Check User
         if let testUser = dicUser[strUser]{
             print("testUser ==> \(testUser)")
+            if strPassword == testUser {
+                // Password True
+                showMessage(strMessage: "welcome to SNRU")
+            } else {
+            
+// Password false
+                showMessage(strMessage: "Please Try Again Password False")
+            }
     
         } else {
             print("testUser nil")
