@@ -93,6 +93,7 @@ class ViewController: UIViewController {
     
         } else {
             print("testUser nil")
+            showMessage(strMessage: "No  " + strUser + "  in my Database  ")
         }
         
         
