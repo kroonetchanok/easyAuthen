@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     // Implicit 
     var strUser: String?
     var strPassword: String?
+    let dicUser = ["master": "124", "doramon": "5678", "nobita": "1234"]
     
     
     
@@ -53,8 +54,12 @@ class ViewController: UIViewController {
 
         // Call checkspace
         if checkSpace(myString: strUser!) && checkSpace(myString: strPassword!) {
+            // No Space
             print("No Space")
             showMessage(strMessage: "")
+            checkUserAndPass(strUser: strUser!, strPassword: strPassword!)
+            
+            
         }  else {
             print("Have Space")
             showMessage(strMessage: "Please Fill Every Blank")
@@ -79,6 +84,19 @@ class ViewController: UIViewController {
         
         // Do any additional setup after loading the view, typically from a nib.
     }  // Main Method
+    
+    func checkUserAndPass(strUser: String, strPassword: String) -> Void {
+        
+        //Check User
+        if let testUser = dicUser[strUser]{
+            print("testUser ==> \(testUser)")
+    
+        } else {
+            print("testUser nil")
+        }
+        
+        
+    }
     
     func showMessage(strMessage: String) -> Void {
         messageLabel.text = strMessage
@@ -108,6 +126,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }  // didRecive
 
-
-}
+    
+}  // Main Class
 
